@@ -68,7 +68,11 @@ func TestRateLimiterGoroutines(t *testing.T) {
 			wg.Wait()
 			ds := float64(time.Since(start)) / float64(time.Second)
 			qps := float64(numOps) / ds
-			if qps > float64(limit)*1.01 {
+
+            // Allow a rate-margin of 0.05% to incorporate for algorithm differences in 
+            // https://pkg.go.dev/golang.org/x/time/rate.
+            // Value was choosen based on experimentation while testing.
+			if qps > float64(limit)*1.05 {
 				t.Errorf("#%d: Too many operations per second. Expected ~%d, got %f", i, limit, qps)
 			}
 		})
