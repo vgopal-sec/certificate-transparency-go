@@ -3,14 +3,12 @@ module github.com/google/certificate-transparency-go
 go 1.12
 
 require (
-	cloud.google.com/go/bigquery v1.8.0 // indirect
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 	github.com/golang/mock v1.4.4
 	github.com/golang/protobuf v1.4.2
 	github.com/google/go-cmp v0.5.2
 	github.com/google/trillian v1.3.11
 	github.com/jonboulle/clockwork v0.2.0 // indirect
-	github.com/juju/ratelimit v1.0.1
 	github.com/kylelemons/godebug v1.1.0
 	github.com/mohae/deepcopy v0.0.0-20170929034955-c48cc78d4826
 	github.com/prometheus/client_golang v1.7.1
@@ -22,7 +20,9 @@ require (
 	go.etcd.io/etcd v0.0.0-20200513171258-e048e166ab9c
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9
 	golang.org/x/net v0.0.0-20200625001655-4c5254603344
+	golang.org/x/time v0.0.0-20200416051211-89c76fbcd5d1
 	google.golang.org/genproto v0.0.0-20200707001353-8e8330bf89df
 	google.golang.org/grpc v1.29.1
 	google.golang.org/protobuf v1.25.0
+	honnef.co/go/tools v0.0.1-2020.1.4 // indirect
 )
